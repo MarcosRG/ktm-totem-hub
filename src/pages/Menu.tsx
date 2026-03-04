@@ -44,10 +44,10 @@ const Menu = () => {
         navigate(`/${currentLang}/oficina`);
         break;
       case "usados":
-        openPopup("https://bikesultoursgest.com/" + (currentLang === "en" ? "en/used-bikes/" : "usados/"));
+        openPopup(currentLang === "en" ? "https://bikesultoursgest.com/en/used/" : "https://bikesultoursgest.com/bicicletas-usadas/");
         break;
       case "tours":
-        openPopup("https://bikesultoursgest.com/" + (currentLang === "en" ? "en/tours/" : "tours/"));
+        openPopup("https://bikesultours.com/");
         break;
     }
   };

@@ -8,10 +8,7 @@ const Oficina = () => {
   const { lang } = useParams<{ lang: string }>();
   const currentLang = lang === "en" ? "en" : "pt";
 
-  const iframeUrl =
-    currentLang === "en"
-      ? "https://bikesultoursgest.com/en/bike-repair-form/"
-      : "https://bikesultoursgest.com/formulario-oficina/";
+  const iframeUrl = "https://bikesul.blump.in/c/workshop/WorkshopFirst";
 
   return (
     <div className="fixed inset-0 bg-background font-varela grid place-items-center">
