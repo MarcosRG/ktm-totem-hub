@@ -5,10 +5,30 @@ import ktmLogo from "@/assets/ktm-logo.png";
 import menuIcon from "@/assets/menu-icon.png";
 import flagPt from "@/assets/flag-pt.png";
 import flagEn from "@/assets/flag-en.png";
-import slidePromo from "@/assets/slide-promo.png";
 
-const slides = [slidePromo];
-const SLIDE_INTERVAL = 5000;
+/* =============================================================
+   🖼️ CONFIGURAÇÃO DO SLIDESHOW — EDITAR AQUI
+   =============================================================
+   Para adicionar ou remover imagens:
+   1. Adicione a URL da imagem na lista abaixo
+   2. Pode usar URLs externas ou importar imagens locais
+   3. Suporta quantas imagens quiser (1 a 20+)
+   
+   Para alterar a velocidade:
+   - Mude SLIDE_INTERVAL (em milissegundos)
+   - 5000 = 5 segundos, 3000 = 3 segundos
+   ============================================================= */
+
+const slides: string[] = [
+  "https://bikesultoursgest.com/wp-content/uploads/2026/03/03.png",
+  // "https://exemplo.com/imagem2.png",
+  // "https://exemplo.com/imagem3.png",
+  // "https://exemplo.com/imagem4.png",
+  // "https://exemplo.com/imagem5.png",
+  // "https://exemplo.com/imagem6.png",
+];
+
+const SLIDE_INTERVAL = 5000; // ⏱️ Tempo entre slides (ms)
 
 const Home = () => {
   const navigate = useNavigate();
