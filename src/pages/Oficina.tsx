@@ -11,18 +11,10 @@ const Oficina = () => {
   const iframeUrl = "https://bikesul.blump.in/c/workshop/WorkshopFirst";
 
   return (
-    <div className="fixed inset-0 bg-background font-varela grid place-items-center">
-      {/* Iframe */}
-      <iframe
-        src={iframeUrl}
-        className="absolute inset-0 w-full h-full border-none z-[1]"
-        title="Oficina"
-      />
-
-      {/* UI Overlay */}
-      <div className="absolute inset-0 z-[99999] pointer-events-none">
-        {/* Flags */}
-        <div className="absolute top-10 right-10 flex gap-5 pointer-events-auto">
+    <div className="fixed inset-0 bg-background font-varela flex flex-col">
+      {/* Top bar with flags */}
+      <div className="relative z-[10] flex justify-end items-center px-10 py-4 bg-background shrink-0">
+        <div className="flex gap-5">
           <button onClick={() => navigate("/en/oficina")} className="bg-transparent border-none p-0 cursor-pointer">
             <img src={flagEn} alt="English" className="flag-button-lg" />
           </button>
@@ -30,19 +22,29 @@ const Oficina = () => {
             <img src={flagPt} alt="Português" className="flag-button-lg" />
           </button>
         </div>
+      </div>
 
-        {/* Home icon */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 pointer-events-auto">
-          <button onClick={() => navigate(`/${currentLang}/menu`)} className="bg-transparent border-none p-0 cursor-pointer">
-            <img
-              src={homeIcon}
-              alt="Home"
-              className="w-[100px] h-auto cursor-pointer drop-shadow-lg transition-transform duration-200"
-              onMouseDown={(e) => ((e.target as HTMLImageElement).style.transform = "scale(0.9)")}
-              onMouseUp={(e) => ((e.target as HTMLImageElement).style.transform = "scale(1)")}
-            />
-          </button>
-        </div>
+      {/* Iframe - takes remaining space */}
+      <div className="flex-1 min-h-0 relative z-[1]">
+        <iframe
+          src={iframeUrl}
+          className="w-full h-full border-none"
+          title="Oficina"
+          allow="geolocation *"
+        />
+      </div>
+
+      {/* Bottom bar with home button */}
+      <div className="relative z-[10] flex justify-center py-4 bg-background shrink-0">
+        <button onClick={() => navigate(`/${currentLang}/menu`)} className="bg-transparent border-none p-0 cursor-pointer">
+          <img
+            src={homeIcon}
+            alt="Home"
+            className="w-[100px] h-auto cursor-pointer drop-shadow-lg transition-transform duration-200"
+            onMouseDown={(e) => ((e.target as HTMLImageElement).style.transform = "scale(0.9)")}
+            onMouseUp={(e) => ((e.target as HTMLImageElement).style.transform = "scale(1)")}
+          />
+        </button>
       </div>
     </div>
   );
