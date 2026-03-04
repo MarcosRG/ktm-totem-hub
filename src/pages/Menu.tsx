@@ -26,7 +26,13 @@ const Menu = () => {
   const labels = menuItems[currentLang];
 
   const openPopup = (url: string) => {
-    window.open(url, "_blank", "fullscreen=yes,scrollbars=yes,resizable=yes");
+    const width = window.screen.availWidth;
+    const height = window.screen.availHeight;
+    const specs = `width=${width},height=${height},top=0,left=0,fullscreen=yes,scrollbars=yes,resizable=yes,status=no,location=no`;
+    const newWin = window.open(url, "_blank", specs);
+    if (!newWin || newWin.closed || typeof newWin.closed === "undefined") {
+      alert("Por favor, permite los popups para ver el catálogo.");
+    }
   };
 
   const handleButton = (key: string) => {
