@@ -24,9 +24,14 @@ const Home = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const openKtmSite = () => {
-    const url = "https://ktm-bike.pt/pt/pt/";
-    window.open(url, "_blank", "fullscreen=yes,scrollbars=yes,resizable=yes");
+  const openPopup = (url: string) => {
+    const width = window.screen.availWidth;
+    const height = window.screen.availHeight;
+    const specs = `width=${width},height=${height},top=0,left=0,fullscreen=yes,scrollbars=yes,resizable=yes,status=no,location=no`;
+    const newWin = window.open(url, "_blank", specs);
+    if (!newWin || newWin.closed || typeof newWin.closed === "undefined") {
+      alert("Por favor, permite los popups para ver el catálogo.");
+    }
   };
 
   return (
@@ -48,7 +53,7 @@ const Home = () => {
       <div className="relative z-10 w-full h-full pointer-events-none">
         {/* KTM Logo */}
         <button
-          onClick={openKtmSite}
+          onClick={() => openPopup("https://ktm-bike.pt/pt/pt/")}
           className="absolute top-10 left-10 w-[180px] pointer-events-auto cursor-pointer bg-transparent border-none p-0"
         >
           <img src={ktmLogo} alt="KTM Logo" className="w-full h-auto" />
