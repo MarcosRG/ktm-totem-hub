@@ -38,13 +38,13 @@ const Menu = () => {
   const handleButton = (key: string) => {
     switch (key) {
       case "alugueres":
-        openPopup("https://dashboard.bikesultoursgest.com/reservar");
+        openPopup("https://dashboard.bikesul.pt/reservar");
         break;
       case "oficina":
         navigate(`/${currentLang}/oficina`);
         break;
       case "usados":
-        openPopup(currentLang === "en" ? "https://bikesultoursgest.com/en/used/" : "https://bikesultoursgest.com/bicicletas-usadas/");
+        openPopup(currentLang === "en" ? "https://bikesul.pt/en/used/" : "https://bikesul.pt/bicicletas-usadas/");
         break;
       case "tours":
         openPopup("https://bikesultours.com/");
