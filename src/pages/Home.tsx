@@ -21,8 +21,8 @@ import flagEn from "@/assets/flag-en.png";
 
 const slides: string[] = [
   "https://bikesul.pt/wp-content/uploads/2026/03/Garmin-Dupla-Perfeita-Master-Video-Reels.mp4",
-  "https://bikesultoursgest.com/wp-content/uploads/2026/03/03.png",
-  "https://bikesul.pt/wp-content/uploads/2026/01/Storie-e1769529155730.png",
+  "https://bikesul.pt/wp-content/uploads/2026/03/PT-EN-TOTEM.png",
+  "https://bikesul.pt/wp-content/uploads/2026/03/Garmin-Dupla-Perfeita.mp4",
   // "https://exemplo.com/video2.mp4",
   // "https://exemplo.com/imagem3.png",
 ];
