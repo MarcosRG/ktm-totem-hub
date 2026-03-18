@@ -21,7 +21,7 @@ import flagEn from "@/assets/flag-en.png";
 
 const slides: string[] = [
   "https://bikesultoursgest.com/wp-content/uploads/2026/03/03.png",
-  // "https://exemplo.com/imagem2.png",
+  "https://bikesul.pt/wp-content/uploads/2026/01/Storie-e1769529155730.png",
   // "https://exemplo.com/imagem3.png",
   // "https://exemplo.com/imagem4.png",
   // "https://exemplo.com/imagem5.png",
