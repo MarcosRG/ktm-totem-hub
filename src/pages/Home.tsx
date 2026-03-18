@@ -20,13 +20,14 @@ import flagEn from "@/assets/flag-en.png";
    ============================================================= */
 
 const slides: string[] = [
+  "https://bikesul.pt/wp-content/uploads/2026/03/Garmin-Dupla-Perfeita-Master-Video-Reels.mp4",
   "https://bikesultoursgest.com/wp-content/uploads/2026/03/03.png",
   "https://bikesul.pt/wp-content/uploads/2026/01/Storie-e1769529155730.png",
+  // "https://exemplo.com/video2.mp4",
   // "https://exemplo.com/imagem3.png",
-  // "https://exemplo.com/imagem4.png",
-  // "https://exemplo.com/imagem5.png",
-  // "https://exemplo.com/imagem6.png",
 ];
+
+const isVideo = (url: string) => /\.(mp4|webm|ogg)$/i.test(url);
 
 const SLIDE_INTERVAL = 5000; // ⏱️ Tempo entre slides (ms)
 
@@ -56,19 +57,33 @@ const Home = () => {
 
   return (
     <div className="fixed inset-0 bg-foreground">
-      {/* Background Slider */}
+      {/* Background Slider — suporta imagens e vídeos */}
       {slides.map((src, i) => (
         <div
           key={i}
-          className="absolute inset-0 bg-cover bg-center transition-opacity"
+          className="absolute inset-0 transition-opacity"
           style={{
-            backgroundImage: `url(${src})`,
             opacity: i === currentSlide ? 1 : 0,
             transitionDuration: "var(--totem-transition)",
           }}
-        />
+        >
+          {isVideo(src) ? (
+            <video
+              src={src}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div
+              className="w-full h-full bg-cover bg-center"
+              style={{ backgroundImage: `url(${src})` }}
+            />
+          )}
+        </div>
       ))}
-
       {/* UI Layer */}
       <div className="relative z-10 w-full h-full pointer-events-none">
         {/* KTM Logo */}
