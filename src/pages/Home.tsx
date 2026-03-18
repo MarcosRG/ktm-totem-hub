@@ -16,7 +16,7 @@ import flagEn from "@/assets/flag-en.png";
    
    Para alterar a velocidade:
    - Mude SLIDE_INTERVAL (em milissegundos)
-   - 5000 = 5 segundos, 3000 = 3 segundos
+   - 7000 = 7 segundos, 5000 = 5 segundos
    ============================================================= */
 
 const slides: string[] = [
