@@ -20,8 +20,13 @@ import flagEn from "@/assets/flag-en.png";
    ============================================================= */
 
 const slides: string[] = [
-  "https://bikesul.pt/wp-content/uploads/2026/04/Mega-Oferta-Sem-Juros.mp4",
-  "https://bikesul.pt/wp-content/uploads/2026/04/s01-100.jpg",
+  "https://bikesul.pt/wp-content/uploads/2026/05/Prancheta-4.png",
+  "https://bikesul.pt/wp-content/uploads/2026/05/Dia-da-Crianca-12.png",
+  "https://bikesul.pt/wp-content/uploads/2026/05/Dia-da-Crianca-10.png",
+  "https://bikesul.pt/wp-content/uploads/2026/05/Dia-da-Crianca-8.png",
+  "https://bikesul.pt/wp-content/uploads/2026/05/Dia-da-Crianca-6.png",
+  "https://bikesul.pt/wp-content/uploads/2026/05/Dia-da-Crianca-4.png",
+  "https://bikesul.pt/wp-content/uploads/2026/05/Dia-da-Crianca-2.png",
   // "https://exemplo.com/video2.mp4",
   // "https://exemplo.com/imagem3.png",
 ];
