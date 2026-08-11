@@ -20,8 +20,7 @@ import flagEn from "@/assets/flag-en.png";
    ============================================================= */
 
 const slides: string[] = [
-  "https://bikesul.pt/wp-content/uploads/2026/04/Mega-Oferta-Sem-Juros.mp4",
-  "https://bikesul.pt/wp-content/uploads/2026/04/s01-100.jpg",
+  "https://bikesul.pt/wp-content/uploads/2026/08/Display-Full-Moon-2.0.png",
   // "https://exemplo.com/video2.mp4",
   // "https://exemplo.com/imagem3.png",
 ];
