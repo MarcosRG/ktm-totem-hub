@@ -21,7 +21,7 @@ import flagEn from "@/assets/flag-en.png";
 
 const slides: string[] = [
 
-  // "https://exemplo.com/video2.mp4",
+  // "https://bikesul.pt/wp-content/uploads/2026/09/Copia-de-Bicicleta-do-mes.png",
   // "https://exemplo.com/imagem3.png",
 ];
 
