@@ -21,8 +21,8 @@ import flagEn from "@/assets/flag-en.png";
 
 const slides: string[] = [
 
-  // "https://bikesul.pt/wp-content/uploads/2026/09/Copia-de-Bicicleta-do-mes.png",
-  // "https://exemplo.com/imagem3.png",
+  "https://bikesul.pt/wp-content/uploads/2026/09/Copia-de-Bicicleta-do-mes.png",
+"https://bikesul.pt/wp-content/uploads/2026/09/WhatsApp-Video-2026-09-07-at-15.33.20.mp4", 
 ];
 
 const isVideo = (url: string) => /\.(mp4|webm|ogg)$/i.test(url);
