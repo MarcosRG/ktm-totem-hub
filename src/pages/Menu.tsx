@@ -10,12 +10,16 @@ const menuItems = {
     oficina: "OFICINA",
     usados: "USADOS",
     tours: "TOURS",
+    loja: "LOJA",
+    orange: "ORANGE DAY - DESCOBRE O TEU PERFIL",
   },
   en: {
     alugueres: "RENTALS",
     oficina: "BIKE REPAIR",
     usados: "USED BIKES",
     tours: "TOURS",
+    loja: "SHOP",
+    orange: "ORANGE DAY - DISCOVER YOUR PROFILE",
   },
 };
 
@@ -49,6 +53,12 @@ const Menu = () => {
       case "tours":
         openPopup("https://bikesultours.com/");
         break;
+      case "loja":
+        openPopup("https://loja.bikesul.pt/");
+        break;
+      case "orange":
+        openPopup("https://bikesul-orange-day-perfil.keenmouse4.chatgpt.site/");
+        break;
     }
   };
 
@@ -57,12 +67,12 @@ const Menu = () => {
       {/* Red Column */}
       <div className="w-[68%] h-full bg-primary relative">
         {/* Buttons */}
-        <div className="absolute top-1/2 left-[48%] -translate-x-[40%] -translate-y-1/2 flex flex-col gap-5 w-1/2 z-10">
+        <div className="absolute top-1/2 left-[48%] -translate-x-[40%] -translate-y-1/2 flex flex-col gap-4 w-1/2 z-10">
           {(Object.keys(labels) as Array<keyof typeof labels>).map((key) => (
             <button
               key={key}
               onClick={() => handleButton(key)}
-              className="totem-button"
+              className={`totem-button ${key === "orange" ? "!whitespace-normal !text-2xl leading-tight" : ""}`}
             >
               {labels[key]}
             </button>
